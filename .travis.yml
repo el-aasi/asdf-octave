@@ -2,7 +2,7 @@ language: c
 sudo: required
   
 before_install:
-  - sudo apt-get build-dep -y octave
+  - sudo apt-get build-dep octave
   
 before_script:
   - git clone https://github.com/asdf-vm/asdf.git
@@ -10,6 +10,5 @@ before_script:
 
 os:
   - linux
-  - osx
   
 script: asdf plugin-test octave https://github.com/nverno/asdf-octave.git
