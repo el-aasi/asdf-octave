@@ -42,5 +42,4 @@ construct_configure_options() {
     echo "$configure_options"
 }
 
-install_octave "$@"
-# install_octave $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
+install_octave $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
