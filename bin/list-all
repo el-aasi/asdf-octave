@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+uri="https://ftp.gnu.org/gnu/octave/"
+# already sorted
+ver=$(curl -s $uri | grep -Po "(?<=octave-)[0-9.]+(?=\.tar\.gz)" | uniq)
+echo $ver
