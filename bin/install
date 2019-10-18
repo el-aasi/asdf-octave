@@ -24,7 +24,7 @@ install_octave() {
         ./configure "$configure_options"
         # Without debuggin symbols:
         # CFLAGS=-O CXXFLAGS=-O LDFLAGS=
-        make "${OCTAVE_MAKE_FLAGS[@]}"
+        make "$OCTAVE_MAKE_FLAGS"
         make install
     )
 }
