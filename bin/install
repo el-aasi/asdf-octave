@@ -33,10 +33,10 @@ construct_configure_options() {
     local install_path=$1
     local configure_options
 
-    if [ "$OCTAVE_CONFIGURE_OPTIONS" = "" ]; then
+    if [ -z "$OCTAVE_CONFIGURE_OPTIONS" ]; then
         configure_options="--prefix=$install_path"
         
-        if [ "$OCTAVE_EXTRA_CONFIGURE_OPTIONS" != "" ]; then
+        if [ -n "$OCTAVE_EXTRA_CONFIGURE_OPTIONS" ]; then
             configure_options="$configure_options $OCTAVE_EXTRA_CONFIGURE_OPTIONS"
         fi
     else
