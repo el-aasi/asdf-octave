@@ -22,9 +22,6 @@ install_octave() {
         cd "octave-$version"
         configure_options="$(construct_configure_options "$install_path")"
         ./configure "$configure_options"
-        # Without debuggin symbols:
-        # CFLAGS=-O CXXFLAGS=-O LDFLAGS=
-        make "$OCTAVE_MAKE_FLAGS"
         make install
     )
 }
